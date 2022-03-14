@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Holautism Home</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" th:href="@{/css/custom.css}"/>
+    <script type="text/javascript" th:src="@{/js/custom.js}"></script>
+    
+</head>
+<body>
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" th:href="@{/home}">Holautism</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page"  th:href="@{/home}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/services}">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/login}">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/register}">Register</a>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/contact}">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="container text-center text-uppercase">
+        <h3 style="color:#4180cb">Registration successful</h3>
+        <br>
+        <br>
+        <h4 <button class="btn btn-outline-primary" type="submit"><a th:href="@{/login}">Click here to Login</a></h4>
+    </div>
+</body>
+</html>

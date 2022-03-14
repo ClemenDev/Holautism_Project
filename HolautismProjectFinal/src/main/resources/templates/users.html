@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>List Professionals</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" th:href="@{/css/custom.css}"/>
+    <script type="text/javascript" th:src="@{/js/custom.js}"></script>
+    
+</head>
+<body onload="greeting()">
+
+<nav class="navbar navbar-expand-lg navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" th:href="@{/home}">Holautism</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" th:href="@{/home}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/services}">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/login}">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/register}">Register</a>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/contact}">Contact</a>
+        </li>
+      </ul>
+</div>
+    </div>
+  </div>
+</nav>
+
+    
+
+<div class="container text-center">
+    <div>
+        <form th:action="@{/logout}" method="post">
+            <h2 style="color:blue">Welcome <b>[[${#request.userPrincipal.principal.fullName}]]</b></h2><br>
+            
+            <div id="greeting" class="mb-5 mt-2">
+            	<img name="timeoftheday">
+            	<div id="txtgreeting"></div>
+            </div>
+            
+            <h3 style="color:blue">* Here are some of your details *</b></h3><br>
+            <h4 style="color:blue">Email: <b>[[${#request.userPrincipal.principal.email}]]</b></h4><br>
+            <h4 style="color:blue">Role: <b>[[${#request.userPrincipal.principal.role}]]</b></h4><br>
+            <input type="submit" value="Sign Out" class="btn btn-primary"/>
+            <a class="btn btn-primary" th:href="@{/account}" sec:authentication="principal.fullName"></a>
+            <p></p>
+            <p style="color:blue">Click on your name button to <u>check</u> or <u>update</u> your account details</p>
+            <hr>
+        </form>
+    </div>
+</div><br>
+<div style="text-align: center;">
+<a th:href="@{/pro_profiles}">
+<img  style="border-radius: 25px"th:src="@{/img/pro.jpg}" src="../static/img/pro.jpg" class="img-fluid" alt="autism">
+</a>
+<p></p>
+<p style="color:blue">Click on the image to check the <u>professionals</u> available for booking</p>
+</div>
+<div class="mt-5 pt-3 footer">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-5 col-xs-12 about-company">
+      <h2>Holautism</h2>
+      <p class="pr-5 text-white">Your website to book professionals on autism support practitioning and language teaching.</p>
+      <p><a href="#"><i class="fa fa-facebook-square mr-1"></i></a><a href="#"><i class="fa fa-linkedin-square"></i></a></p>
+    </div>
+    <div class="col-lg-3 col-xs-12 links">
+      <h4 class="mt-lg-0 mt-sm-3">Links</h4>
+        <ul class="m-0 p-0">
+          <li>- <a th:href="@{/home}">Home</a></li>
+          <li>- <a th:href="@{/services}">Services</a></li>
+          <li>- <a th:href="@{/login}">Login</a></li>
+          <li>- <a th:href="@{/register}">Register</a></li>
+          <li>- <a th:href="@{/contact}">Contact</a></li>
+        </ul>
+    </div>
+    <div class="col-lg-4 col-xs-12 location">
+      <h4 class="mt-lg-0 mt-sm-4">Location</h4>
+      <p>22, Visitadora Santos</p>
+      <p></i>(353) 01 829 2018</p>
+      <p></i><a th:href="@{/contact}">x20146825@student.ncirl.ie</a></i></p>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col copyright">
+      <p class=""><small class="text-white-50">© 2021. All Rights Reserved. Author: Jose Luis Clemente Espada</small></p>
+    </div>
+  </div>
+</div>
+</div>    
+</body>
+</html>

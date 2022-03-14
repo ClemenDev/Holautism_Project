@@ -1,0 +1,94 @@
+.navbar{
+	margin-bottom: 30px;
+}
+
+#message{
+	color: blue;
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+
+.images{
+	margin-top: 5px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+.nav-item{
+	border-right-style: solid;
+	border-right-width: thin;
+	border-right-color: #4180cb;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+.main{
+	padding-bottom: 5px;
+	margin-bottom: 30px;
+}
+.container{
+	padding-top: 25px;
+}
+
+#regformtitle{
+	padding-bottom: 25px;
+	padding-top: 10px;
+	text-transform: uppercase;
+}
+
+.jumbotron{
+	text-align: center;
+	background-color: white;
+	color: #4180cb; 
+	margin-bottom: auto;
+}
+
+.imgUsu{
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 230px;
+	width: 230px;
+}
+
+#txtgreeting{
+	color:blue;
+}
+
+.footer {
+	 background: #152f4f;
+	 color: white; 
+}
+
+ .footer .links ul {
+	 list-style-type: none;
+}
+ .footer .links li a {
+	 color: white;
+	 transition: color 0.2s;
+}
+
+ .footer .links li a:hover {
+	 text-decoration: none;
+	 color: #4180cb;
+}
+ .footer .about-company i {
+	 font-size: 25px;
+}
+
+ .footer .about-company a {
+	 color: white;
+	 transition: color 0.2s;
+}
+
+ .footer .about-company a:hover {
+	 color: #4180cb;
+}
+
+ .footer .location i {
+	 font-size: 18px;
+}
+
+ .footer .copyright p {
+	 border-top: 1px solid rgba(255, 255, 255, .1);
+}
